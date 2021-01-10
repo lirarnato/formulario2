@@ -1,0 +1,73 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Pagina Inicial</title>
+    </head>
+        <body>
+            <h1>Lista de Clientes</h1>            
+            <br>
+            <table border="5">
+                <tr>
+                    <td>ID</td>
+                    <td>Nome do Projeto</td>
+                    <td>Data de Início</td>
+                    <td>Data de Fim</td>
+                    <td>Valor do Projeto</td>
+                    <td>Risco</td>
+                    <td>Telefone</td>
+                    <td>Simular Investimento</td>
+                    <td>Excluir</td>
+                </tr>
+                {% for projeto in projetos%}
+                <tr>
+                    <td>{{ projeto._id }}</td>
+                    <td>{{ projeto.projeto }}</td>
+                    <td>{{ projeto.dataInicio }}</td>
+                    <td>{{ projeto.dataFim }}</td>
+                    <td>{{ projeto.valorProjeto }}</td>
+                    <td>{{ projeto.risco }}</td>
+                    <td>{{ projeto.telefone }}</td>
+                    <td>                    
+                    <p>Clique para simular.</p>
+
+                                <button onclick="myFunction()">Simular investimento</button>
+
+                                <p id="demo"></p>
+
+                                <script>
+                                function myFunction()
+                                {
+
+                                    
+                                
+                                var ganho=prompt("Informe o valor ganho:");
+
+                                var investimento=prompt("Informe o valor do investimento:");
+
+                                var rip = (ganho - investimento)/investimento
+
+                                if (rip <= 5){
+                                 rip="Risco do projeto baixo";
+                                    document.getElementById("demo").innerHTML=rip;
+                                }else if(rip >= 10){
+                                 rip="Risco do projeto mediano";
+                                    document.getElementById("demo").innerHTML=rip;
+                                }
+                                else if(rip == 20){
+                                 rip="Risco do projeto alto";
+                                    document.getElementById("demo").innerHTML=rip;
+                                }
+                              
+                                
+                                }
+                                </script>
+                    </td>
+                    <td><a href="/excluir/{{ projeto._id }}">X</a></td>
+                </tr>
+                {% endfor %}
+            </table> 
+            <a href="/index">Voltar</a>           
+        </body>   
+
+</html>

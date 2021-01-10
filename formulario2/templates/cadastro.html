@@ -1,0 +1,43 @@
+<!DOCTYPE html>
+<html>
+    <head>
+        <meta charset="utf-8">
+        <title>Cadastro</title>
+    </head>
+        <body>
+            <h1>Pagina de Cadastro de Projetos</h1>
+            <br>
+            <form action="{{url_for("cadastro")}}" method="POST">
+                <table>
+                    <tr>
+                        <td>Nome do Projeto</td>
+                        <td><input type="text" name="projeto"></td>
+                    </tr>
+                    <tr>
+                        <td>Data de Início</td>
+                        <td><input type="date" name="dataInicio"></td>
+                    </tr>
+                    <tr>
+                        <td>Data de Fim</td>
+                        <td><input type="date" name="dataFim"></td>
+                    </tr>
+                     <tr>
+                        <td>Valor do Projeto</td>
+                        <td><input type="number" name="valorProjeto"></td>
+                    </tr>
+                    <tr>
+                        <td>Risco</td>
+                        <td><input type="number" name="risco"></td>
+                    </tr>
+                    <tr>
+                        <td>Telefone</td>
+                        <td><input type="text" name="telefone"></td>
+                    </tr>
+                </table>
+                <input type="submit" value="Cadastrar">
+            </form>
+            <a href="/index">Voltar</a> 
+        </body>
+    
+
+</html>
