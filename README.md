@@ -8,3 +8,5 @@ Front-End:
 HTML
 JavaScript
 
+Servidor iniciado pelo prompt de comando
+
