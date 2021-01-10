@@ -2,11 +2,9 @@
 Projeto voltado para calculo de retorno de investimento
 
 No projeto em questao foram usados os seguintes componentes:
-Back-End
-IDE: VSCode
-Linguagem: Flask
+Back-End: VSCode e Flask
 
-Front-End
+Front-End: 
 HTML
 JavaScript
 
